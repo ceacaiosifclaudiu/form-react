@@ -1,7 +1,12 @@
-const RightComponent = ({ goToLogin }: any) => {
+import { useDispatch } from "react-redux";
+import { goToLogin } from "../../../redux/userSlice";
+
+const RightComponent = () => {
+  const dispatch = useDispatch();
+
   return (
     <div className="right">
-      <h1 onClick={goToLogin}>Go to login</h1>
+      <h1 onClick={() => dispatch(goToLogin())}>Go to login</h1>
     </div>
   );
 };

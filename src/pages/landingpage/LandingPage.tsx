@@ -1,26 +1,19 @@
-import React from "react";
 import "./LandingPage.css";
 import CenterComponent from "./components/CenterComponent";
 import LeftComponent from "./components/LeftComponent";
 import RightComponent from "./components/RightComponent";
+import { useSelector } from "react-redux";
+import { RootState } from "../../redux/store";
 
 const LandingPage = () => {
-  const [userHaveAccount, setUserHaveAccount] = React.useState(true);
-
-  const goToSingup = () => {
-    setUserHaveAccount(false);
-  };
-
-  const goToLogin = () => {
-    setUserHaveAccount(true);
-  };
+  const user = useSelector((state: RootState) => state.userAccount.value);
 
   return (
     <div className="containerDinamic">
-      <div className={`innerContainer ${userHaveAccount ? null : "active"}`}>
-        <LeftComponent goToSingup={goToSingup} />
+      <div className={`innerContainer ${user ? null : "active"}`}>
+        <LeftComponent />
         <CenterComponent />
-        <RightComponent goToLogin={goToLogin} />
+        <RightComponent />
       </div>
     </div>
   );
