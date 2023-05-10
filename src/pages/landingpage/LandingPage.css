@@ -17,26 +17,41 @@
   transition: 1s ease;
 }
 
-.left {
-  flex: 1;
-  background: var(--backgroundContainers);
-  height: 100%;
-}
-
 .center {
-  flex: 2;
+  flex: 1.8;
   position: relative;
   height: 100%;
   background: var(--backgroundContainers);
   overflow: hidden;
 }
 
-.right {
-  flex: 1;
-  background: var(--backgroundContainers);
-  height: 100%;
-}
-
 .active {
   transform: translateX(-50%);
+}
+
+.containerForm {
+  width: 80%;
+  height: 85%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.formTitle {
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.formDescription {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.formDescription span {
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
 }

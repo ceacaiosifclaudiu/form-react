@@ -1,7 +1,7 @@
 import "./LandingPage.css";
 import CenterComponent from "./components/CenterComponent";
-import LeftComponent from "./components/LeftComponent";
-import RightComponent from "./components/RightComponent";
+import LoginComponent from "./components/login/LoginComponent";
+import SingupComponent from "./components/singup/SingupComponent";
 import { useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
 
@@ -11,9 +11,9 @@ const LandingPage = () => {
   return (
     <div className="containerDinamic">
       <div className={`innerContainer ${user ? null : "active"}`}>
-        <LeftComponent />
+        <LoginComponent />
         <CenterComponent />
-        <RightComponent />
+        <SingupComponent />
       </div>
     </div>
   );

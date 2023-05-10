@@ -1,0 +1,23 @@
+.loginContainer {
+  flex: 1;
+  background: var(--backgroundContainers);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginFormCredentils {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-block: 25px;
+}
+
+.loginFormCredentils p {
+  margin: 0 auto;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+}
