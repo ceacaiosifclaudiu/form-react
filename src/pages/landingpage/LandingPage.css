@@ -1,0 +1,42 @@
+.containerDinamic {
+  width: 900px;
+  height: 600px;
+  background: white;
+  border-radius: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.innerContainer {
+  width: 200%;
+  height: 100%;
+  background: var(--backgroundContainers);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 1s ease;
+}
+
+.left {
+  flex: 1;
+  background: var(--backgroundContainers);
+  height: 100%;
+}
+
+.center {
+  flex: 2;
+  position: relative;
+  height: 100%;
+  background: var(--backgroundContainers);
+  overflow: hidden;
+}
+
+.right {
+  flex: 1;
+  background: var(--backgroundContainers);
+  height: 100%;
+}
+
+.active {
+  transform: translateX(-50%);
+}

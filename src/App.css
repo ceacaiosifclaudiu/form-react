@@ -1,0 +1,22 @@
+.background {
+  background: #0093e9;
+  background-image: var(--backgroundImge);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  max-width: 900px;
+  width: 900px;
+  height: 600px;
+  background: white;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

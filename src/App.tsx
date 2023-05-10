@@ -1,26 +1,6 @@
-import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import { RouterProvider } from "react-router-dom";
 import "./App.css";
-
-const Layout = () => {
-  return (
-    <div>
-      <Outlet />
-    </div>
-  );
-};
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Layout />,
-    children: [
-      {
-        index: true,
-        element: <>Hi</>,
-      },
-    ],
-  },
-]);
+import router from "./navigation/router";
 
 function App() {
   return (
