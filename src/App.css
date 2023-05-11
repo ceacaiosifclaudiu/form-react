@@ -29,6 +29,7 @@ input {
   font-weight: 500;
   font-size: 13px;
   width: 100%;
+  outline: none;
 }
 
 input[type="submit"] {
@@ -42,4 +43,8 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
   box-shadow: 0 0 17px 1px rgb(0 0 0 / 20%);
+}
+
+.errorBorder {
+  outline: 1px solid red;
 }

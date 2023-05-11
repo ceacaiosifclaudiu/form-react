@@ -10,14 +10,25 @@
 .loginFormCredentils {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 25px;
   margin-block: 25px;
 }
 
-.loginFormCredentils p {
+.forgotPassword {
   margin: 0 auto;
   font-size: 12px;
   font-weight: 600;
   text-decoration: underline;
   cursor: pointer;
+}
+
+.inputContainer {
+  position: relative;
+}
+
+.loginFormCredentils .inputErrorMessage {
+  position: absolute;
+  bottom: -18px;
+  color: var(--errorColor);
+  font-size: 13px;
 }
