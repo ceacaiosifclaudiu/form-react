@@ -18,7 +18,7 @@
 }
 
 .center {
-  flex: 1.8;
+  flex: 1.7;
   position: relative;
   height: 100%;
   background: var(--backgroundContainers);
@@ -30,7 +30,7 @@
 }
 
 .containerForm {
-  width: 80%;
+  width: 85%;
   height: 85%;
   display: flex;
   justify-content: center;
@@ -54,4 +54,39 @@
   font-weight: 600;
   text-decoration: underline;
   cursor: pointer;
+}
+
+.loginContainer {
+  flex: 1;
+  background: var(--backgroundContainers);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginFormCredentils {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-block: 25px;
+}
+
+.forgotPassword {
+  margin: 0 auto;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.inputContainer {
+  position: relative;
+}
+
+.loginFormCredentils .inputErrorMessage {
+  position: absolute;
+  bottom: -18px;
+  color: var(--errorColor);
+  font-size: 13px;
 }

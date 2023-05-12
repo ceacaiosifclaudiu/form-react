@@ -19,8 +19,8 @@ const registerSchema = yup.object().shape({
 const loginSchema = yup.object().shape({
     email: yup.string().email().required("This field its required!"),
     password: yup.string()
-        .matches(passwordRules, { message: "Please create a stronger password" })
-        .required("Required"),
+        .required("Please enter a password")
+        .matches(passwordRules, { message: "Please create a stronger password" }),
 })
 
 export { registerSchema, loginSchema }
