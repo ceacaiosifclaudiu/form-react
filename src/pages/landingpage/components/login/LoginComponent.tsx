@@ -35,24 +35,27 @@ const LoginComponent = () => {
         </p>
         <form onSubmit={handleSubmit(submitForm)}>
           <div className="loginFormCredentils">
-            <div className="inputContainer">
+            <div className="inputNewContainer">
               <input
                 {...register("email")}
-                type="text"
-                placeholder="Email"
-                className={errors?.email?.message ? "errorBorder" : ""}
+                type="email"
+                className="inputNew"
+                placeholder=" "
               />
+              <label className="inputNewLabel">Email</label>
               <p className="inputErrorMessage">
                 {errors?.email?.message?.toString()}
               </p>
             </div>
-            <div className="inputContainer">
+
+            <div className="inputNewContainer">
               <input
                 {...register("password")}
                 type="password"
-                placeholder="Password"
-                className={errors?.password?.message ? "errorBorder" : ""}
+                className="inputNew"
+                placeholder=" "
               />
+              <label className="inputNewLabel">Password</label>
               <p className="inputErrorMessage">
                 {errors?.password?.message?.toString()}
               </p>

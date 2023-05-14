@@ -1,9 +1,29 @@
 import { useDispatch } from "react-redux";
+import Terms from "../../../../component/inputs/Terms";
 import { goToLogin } from "../../../../redux/userSlice";
 import "./Singup.css";
 
+import { yupResolver } from "@hookform/resolvers/yup";
+import { useForm } from "react-hook-form";
+import { registerSchema } from "../../.../../../../schema/formSchema";
+import Input from "../../../../component/inputs/Input";
+import Optionalinfo from "./components/Optionalinfo";
+import PersonalDetails from "./components/PersonalDetails";
+import Security from "./components/Security";
+
 const SingupComponent = () => {
   const dispatch = useDispatch();
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+  } = useForm({
+    resolver: yupResolver(registerSchema),
+  });
+
+  const submitForm = (data: any) => {
+    console.log(data);
+  };
 
   return (
     <div className="singupContainer">
@@ -17,79 +37,24 @@ const SingupComponent = () => {
           Already have an account?{" "}
           <span onClick={() => dispatch(goToLogin())}>Go to login</span>
         </p>
-        <form>
+        <form onSubmit={handleSubmit(submitForm)}>
           <div className="loginFormCredentils">
-            {/* Personal Details */}
-            <div className="inputsContainer">
-              <div className="inputContainer">
-                <input type="text" placeholder="First Name" />
-                <p className="inputErrorMessage"></p>
-              </div>
-              <div className="inputContainer">
-                <input type="password" placeholder="Last Name" />
-                <p className="inputErrorMessage"></p>
-              </div>
-            </div>
+            <PersonalDetails register={register} errors={errors} />
 
-            {/* Email */}
-            <div className="inputContainer">
-              <input type="email" placeholder="Email" />
-              <p className="inputErrorMessage"></p>
-            </div>
+            <Input
+              formObject={register("email")}
+              message={errors?.email?.message?.toString()}
+              type="email"
+              placeholder="Email"
+            />
 
-            {/* Password */}
-            <div className="inputsContainer">
-              <div className="inputContainer">
-                <input type="password" placeholder="Pasword" />
-                <p className="inputErrorMessage"></p>
-              </div>
-              <div className="inputContainer">
-                <input type="password" placeholder="Confirm Password" />
-                <p className="inputErrorMessage"></p>
-              </div>
-            </div>
+            <Security register={register} errors={errors} />
 
-            {/* Optional Information Inputs */}
-            <div className="optionalInfoContainer">
-              <div className="radioButtonsContainer">
-                <p>Is this account:</p>
-                <div className="radioButtonsOptions">
-                  <div className="radioButtons">
-                    <input type="radio" name="account" placeholder="Pasword" />
-                    <label>Personal</label>
-                  </div>
-                  <div className="radioButtons">
-                    <input
-                      type="radio"
-                      name="account"
-                      placeholder="Confirm Password"
-                    />
-                    <label>Business</label>
-                  </div>
-                </div>
-              </div>
-              <div className="selectOptionContainer">
-                <label>Choose a pronounce:</label>
-                <select>
-                  <option value="">--Choose an option--</option>
-                  <option value="She/Her">She/Her</option>
-                  <option value="He/Him">He/Him</option>
-                  <option value="Per/Per">Per/Per</option>
-                  <option value="They/Them">They/Them</option>
-                </select>
-              </div>
-            </div>
+            <Optionalinfo register={register} />
 
-            <div className="termsContainer">
-              <input type="checkbox" />
-              <p className="checkboxText">
-                Accept terms and conditions{" "}
-                <span style={{ color: "var(--pink)" }}>*</span>
-              </p>
-              <p className="errorCheckbox"></p>
-            </div>
+            <Terms register={register} errors={errors} />
           </div>
-          <input type="submit" value="Login" />
+          <input type="submit" value="Create Account" />
         </form>
       </div>
     </div>

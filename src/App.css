@@ -23,8 +23,8 @@
 
 input {
   border: 1px solid var(--whiteColor);
-  padding: 0.8rem 1rem;
-  background: rgb(231, 231, 231);
+  padding: 0.8rem 10px;
+  background: var(--backgroundContainers);
   color: #3e3b3c;
   font-weight: 500;
   font-size: 13px;
@@ -74,4 +74,27 @@ input[type="checkbox"] {
 
 .errorBorder {
   outline: 1px solid red;
+}
+
+.termsContainer {
+  position: relative;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 5px;
+  align-self: center;
+  width: 100%;
+}
+
+.checkboxText {
+  flex: 10;
+}
+
+.errorCheckbox {
+  position: absolute;
+  bottom: -21px;
+  width: 250px;
+  color: var(--errorColor);
+  left: 0;
+  font-size: 13px;
 }

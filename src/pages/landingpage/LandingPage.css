@@ -88,5 +88,38 @@
   position: absolute;
   bottom: -18px;
   color: var(--errorColor);
-  font-size: 13px;
+  font-size: 12px;
+}
+
+/* --------------------------------------- */
+.inputNewContainer {
+  position: relative;
+}
+
+.inputNew {
+  background: transparent;
+  border-bottom: 1px solid var(--backgroundSecundary);
+  outline: none;
+}
+
+.inputNew:focus {
+  outline: none;
+}
+
+.inputNewContainer .inputNew ~ label {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+  font-size: 17px;
+  padding-inline: 5px;
+}
+
+.inputNew:focus ~ label,
+.inputNew:not(:placeholder-shown) ~ label {
+  color: var(--background);
+  background: var(--backgroundContainers);
+  font-size: 11px;
+  transform: translateX(5px) translateY(-20px);
 }
