@@ -1,0 +1,91 @@
+.containerDinamic {
+  flex-basis: 900px;
+  max-width: 90%;
+  height: 650px;
+  background: white;
+  border-radius: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.innerContainer {
+  width: 200%;
+  height: 100%;
+  background: var(--backgroundContainers);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 1s ease;
+}
+
+.center {
+  flex: 1.7;
+  position: relative;
+  height: 100%;
+  background: var(--backgroundContainers);
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 1000px) {
+  .center {
+    flex: 1.2;
+  }
+}
+
+@media only screen and (max-width: 751px) {
+  .center {
+    flex: 0;
+  }
+}
+
+@media only screen and (max-width: 439px) {
+  .containerDinamic {
+    height: 765px;
+  }
+}
+
+.active {
+  transform: translateX(-50%);
+}
+
+.containerForm {
+  width: 85%;
+  height: 85%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.formTitle {
+  font-size: clamp(1rem, 0.375rem + 2vw, 1.5rem);
+  line-height: 28px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.formDescription {
+  font-size: clamp(0.75rem, 0.5938rem + 0.5vw, 0.875rem);
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.formDescription span {
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.forgotPassword {
+  margin: 0 auto;
+  font-size: clamp(0.625rem, 0.4688rem + 0.5vw, 0.75rem);
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.loginFormCredentils .inputErrorMessage {
+  position: absolute;
+  bottom: -18px;
+  color: var(--errorColor);
+  font-size: clamp(0.5625rem, 0.4063rem + 0.5vw, 0.6875rem);
+}

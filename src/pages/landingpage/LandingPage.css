@@ -1,0 +1,30 @@
+.containerLandingPage {
+  flex-basis: 900px;
+  max-width: 90%;
+  height: 650px;
+  background: white;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.logoutButton {
+  cursor: pointer;
+  background-image: var(--backgroundImge);
+  color: white;
+  font-size: clamp(0.875rem, 0.5625rem + 1vw, 1.125rem);
+  text-align: center;
+  padding: 0.8rem 10px;
+  font-weight: 500;
+}
+
+.logoutButton:hover {
+  box-shadow: 0 0 17px 1px rgb(0 0 0 / 20%);
+}
+
+.containerLandingPage h1 {
+  font-size: clamp(1.2rem, -0.4063rem + 4.5vw, 2.125rem);
+}

@@ -1,0 +1,33 @@
+.inputContainer {
+  position: relative;
+  min-width: 160px;
+  flex: 1;
+}
+
+.input {
+  background: transparent;
+  border-bottom: 1px solid var(--backgroundSecundary);
+  outline: none;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.inputContainer .input ~ label {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+  font-size: clamp(0.875rem, 0.6406rem + 0.75vw, 1.0625rem);
+  padding-inline: 5px;
+}
+
+.input:focus ~ label,
+.input:not(:placeholder-shown) ~ label {
+  color: var(--background);
+  background: var(--backgroundContainers);
+  font-size: clamp(0.5625rem, 0.4063rem + 0.5vw, 0.6875rem);
+  transform: translateX(5px) translateY(-20px);
+}

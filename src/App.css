@@ -1,0 +1,65 @@
+.background {
+  background: #0093e9;
+  background-image: var(--backgroundImge);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input {
+  border: 1px solid var(--whiteColor);
+  padding: 0.8rem 10px;
+  background: var(--backgroundContainers);
+  color: #3e3b3c;
+  font-weight: 500;
+  font-size: 13px;
+  width: 100%;
+  outline: none;
+}
+
+input:focus {
+  outline: 1px solid var(--backgroundSecundary);
+}
+
+input[type="submit"] {
+  width: 100%;
+  cursor: pointer;
+  background-image: var(--backgroundImge);
+  color: white;
+  font-size: clamp(0.875rem, 0.5625rem + 1vw, 1.125rem);
+  text-align: center;
+}
+
+input[type="submit"]:hover {
+  box-shadow: 0 0 17px 1px rgb(0 0 0 / 20%);
+}
+
+input[type="radio"] {
+  appearance: none;
+
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  padding: 0;
+  border: 1px solid var(--background);
+  background: var(--backgroundContainers);
+}
+
+input[type="radio"]:checked {
+  background: var(--background);
+}
+
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  margin-right: 5px;
+  accent-color: var(--background);
+}
+
+.errorBorder {
+  outline: 1px solid red;
+}
+

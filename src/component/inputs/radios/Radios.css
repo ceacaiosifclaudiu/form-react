@@ -1,0 +1,39 @@
+.radioButtonsContainer {
+  display: flex;
+  flex: 1;
+  min-width: 165px;
+}
+
+.titleRadios {
+  font-size: clamp(0.875rem, 0.7188rem + 0.5vw, 1rem);
+}
+
+.radioButtonsOptions {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 10px;
+  flex: 1;
+}
+
+.radioButtons {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.radioButtons label {
+  font-size: clamp(0.6625rem, 0.25rem + 1vw, 0.8125rem);
+}
+
+
+@media only screen and (max-width: 439px) {
+  .radioButtonsOptions {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .radioButtonsContainer {
+    align-items: center;
+    margin-bottom: 20px;
+  }
+}
