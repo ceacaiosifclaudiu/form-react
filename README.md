@@ -2,12 +2,14 @@
 
 Live demo: https://form-git-main-ceacaiosifclaudiu.vercel.app/
 
-#Get Started
+## Get Started
+
 install dev dependencies
 
-npm install
+### `npm install`
 
-#Then
+## Then
+
 Run The app
 
-npm run dev
+### `npm run dev`
