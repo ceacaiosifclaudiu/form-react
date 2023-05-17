@@ -40,14 +40,14 @@ const LoginComponent = () => {
           <div className="loginFormCredentils">
             <Input
               formObject={register("email")}
-              message={errors?.firstName?.message?.toString()}
+              message={errors?.email?.message?.toString()}
               type="email"
               placeholder="Email"
             />
 
             <Input
               formObject={register("password")}
-              message={errors?.firstName?.message?.toString()}
+              message={errors?.password?.message?.toString()}
               type="password"
               placeholder="Password"
             />
