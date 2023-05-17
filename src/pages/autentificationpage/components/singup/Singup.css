@@ -1,0 +1,21 @@
+.singupContainer {
+  flex: 1;
+  background: var(--backgroundContainers);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inputsContainer {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.optionalInfoContainer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+

@@ -1,12 +1,12 @@
 import { useDispatch } from "react-redux";
-import Terms from "../../../../component/inputs/Terms";
+import Terms from "../../../../component/inputs/terms/Terms";
 import { goToLogin } from "../../../../redux/userHaveAccountSlice";
 import "./Singup.css";
 
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import { registerSchema } from "../../.../../../../schema/formSchema";
-import Input from "../../../../component/inputs/Input";
+import Input from "../../../../component/inputs/input/Input";
 import Optionalinfo from "./components/Optionalinfo";
 import PersonalDetails from "./components/PersonalDetails";
 import Security from "./components/Security";

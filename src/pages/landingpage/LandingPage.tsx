@@ -1,19 +1,28 @@
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import React from "react";
+import { logOut } from "../../redux/userAccountSlice";
 import "./LandingPage.css";
-import CenterComponent from "./components/CenterComponent";
-import LoginComponent from "./components/login/LoginComponent";
-import SingupComponent from "./components/singup/SingupComponent";
-import { useSelector } from "react-redux";
-import { RootState } from "../../redux/store";
 
 const LandingPage = () => {
-  const user = useSelector((state: RootState) => state.userHaveAccount.value);
+  const user = useSelector((state: any) => state.user);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  console.log(user);
+
+  React.useEffect(() => {
+    if (user.email === "") {
+      navigate("/");
+    }
+  }, [user]);
 
   return (
-    <div className="containerDinamic">
-      <div className={`innerContainer ${user ? null : "active"}`}>
-        <LoginComponent />
-        <CenterComponent />
-        <SingupComponent />
+    <div className="containerLandingPage">
+      <img src={user?.picture} alt="" />
+      <h1>Hi {user?.name ? user?.name : null}</h1>
+      
+      <div className="logoutButton" onClick={() => dispatch(logOut())}>
+        Log out
       </div>
     </div>
   );

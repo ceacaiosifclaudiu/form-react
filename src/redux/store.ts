@@ -1,9 +1,9 @@
-import { configureStore } from '@reduxjs/toolkit'
+import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import userHaveAccountReducer from './userHaveAccountSlice'
 import userAccountReducer from "./userAccountSlice"
 
+import storage from 'redux-persist/lib/storage';
 import {
-    persistStore,
     persistReducer,
     FLUSH,
     REHYDRATE,
@@ -11,23 +11,22 @@ import {
     PERSIST,
     PURGE,
     REGISTER,
-} from "redux-persist";
-import storage from "redux-persist/lib/storage";
+} from 'redux-persist';
 
 const persistConfig = {
-    key: "root",
+    key: "user",
     storage,
 };
 
-const persistedUserhaveAccount = persistReducer(persistConfig, userHaveAccountReducer);
-const persisteduserAccountReducer = persistReducer(persistConfig, userAccountReducer);
+const reducers = combineReducers({
+    userHaveAccount: userHaveAccountReducer,
+    user: userAccountReducer
+});
 
+const persistedReducer = persistReducer(persistConfig, reducers);
 
 export const store = configureStore({
-    reducer: {
-        userHaveAccount: persistedUserhaveAccount,
-        user: persisteduserAccountReducer
-    },
+    reducer: persistedReducer,
     middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware({
             serializableCheck: {
@@ -35,8 +34,6 @@ export const store = configureStore({
             },
         }),
 });
-
-export let persistor = persistStore(store);
 
 // Infer the `RootState` and `AppDispatch` types from the store itself
 export type RootState = ReturnType<typeof store.getState>

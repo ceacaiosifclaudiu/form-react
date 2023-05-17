@@ -16,9 +16,7 @@ const GoogleConnect = () => {
         onSuccess={(credentialResponse: any) => {
           const details = jwt_decode(credentialResponse?.credential);
           dispatch(setUser(details));
-          
-
-          navigate("/otherpage");
+          navigate("/store");
         }}
         onError={() => {
           console.log("Login Failed");

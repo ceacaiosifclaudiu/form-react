@@ -1,3 +1,5 @@
+import "./Input.css";
+
 type Input = {
   type?: string;
   placeholder?: string;
@@ -7,9 +9,9 @@ type Input = {
 
 const Input = ({ type, message, placeholder, formObject }: Input) => {
   return (
-    <div className="inputNewContainer">
-      <input {...formObject} type={type} className="inputNew" placeholder=" " />
-      <label className="inputNewLabel">{placeholder}</label>
+    <div className="inputContainer">
+      <input {...formObject} type={type} className="input" placeholder=" " />
+      <label className="inputLabel">{placeholder}</label>
       <p className="inputErrorMessage">{message}</p>
     </div>
   );

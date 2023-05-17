@@ -1,127 +1,30 @@
-.containerDinamic {
-  width: 900px;
+.containerLandingPage {
+  flex-basis: 900px;
+  max-width: 90%;
   height: 650px;
   background: white;
   border-radius: 40px;
-  position: relative;
-  overflow: hidden;
-}
-
-.innerContainer {
-  width: 200%;
-  height: 100%;
-  background: var(--backgroundContainers);
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 1s ease;
-}
-
-.center {
-  flex: 1.7;
-  position: relative;
-  height: 100%;
-  background: var(--backgroundContainers);
-  overflow: hidden;
-}
-
-.active {
-  transform: translateX(-50%);
-}
-
-.containerForm {
-  width: 85%;
-  height: 85%;
-  display: flex;
-  justify-content: center;
   flex-direction: column;
+  gap: 1rem;
 }
 
-.formTitle {
-  font-size: 24px;
-  line-height: 28px;
-  margin-bottom: 15px;
-  font-weight: 700;
-}
-
-.formDescription {
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: 400;
-}
-
-.formDescription span {
-  font-weight: 600;
-  text-decoration: underline;
+.logoutButton {
   cursor: pointer;
+  background-image: var(--backgroundImge);
+  color: white;
+  font-size: clamp(0.875rem, 0.5625rem + 1vw, 1.125rem);
+  text-align: center;
+  padding: 0.8rem 10px;
+  font-weight: 500;
 }
 
-.loginContainer {
-  flex: 1;
-  background: var(--backgroundContainers);
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.logoutButton:hover {
+  box-shadow: 0 0 17px 1px rgb(0 0 0 / 20%);
 }
 
-.loginFormCredentils {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  margin-block: 25px;
+.containerLandingPage h1 {
+  font-size: clamp(1.2rem, -0.4063rem + 4.5vw, 2.125rem);
 }
-
-.forgotPassword {
-  margin: 0 auto;
-  font-size: 12px;
-  font-weight: 600;
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.inputContainer {
-  position: relative;
-}
-
-.loginFormCredentils .inputErrorMessage {
-  position: absolute;
-  bottom: -18px;
-  color: var(--errorColor);
-  font-size: 12px;
-}
-
-/* --------------------------------------- */
-.inputNewContainer {
-  position: relative;
-}
-
-.inputNew {
-  background: transparent;
-  border-bottom: 1px solid var(--backgroundSecundary);
-  outline: none;
-}
-
-.inputNew:focus {
-  outline: none;
-}
-
-.inputNewContainer .inputNew ~ label {
-  position: absolute;
-  bottom: 10px;
-  left: 0;
-  pointer-events: none;
-  transition: 0.3s ease;
-  font-size: 17px;
-  padding-inline: 5px;
-}
-
-.inputNew:focus ~ label,
-.inputNew:not(:placeholder-shown) ~ label {
-  color: var(--background);
-  background: var(--backgroundContainers);
-  font-size: 11px;
-  transform: translateX(5px) translateY(-20px);
-}
-
-

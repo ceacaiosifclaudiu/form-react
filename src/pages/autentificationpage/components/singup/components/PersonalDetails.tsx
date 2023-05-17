@@ -1,4 +1,4 @@
-import Input from "../../../../../component/inputs/Input";
+import Input from "../../../../../component/inputs/input/Input";
 
 const PersonalDetails = ({ register, errors }: any) => {
   return (

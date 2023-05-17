@@ -1,3 +1,5 @@
+import "./Terms.css"
+
 const Terms = ({ register, errors }: any) => {
   return (
     <div className="termsContainer">

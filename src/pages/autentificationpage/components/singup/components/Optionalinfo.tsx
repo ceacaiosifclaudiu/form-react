@@ -1,5 +1,5 @@
-import Radios from "../../../../../component/inputs/Radios";
-import Select from "../../../../../component/inputs/Select";
+import Radios from "../../../../../component/inputs/radios/Radios";
+import Select from "../../../../../component/inputs/select/Select";
 
 const Optionalinfo = ({ register }: any) => {
   return (

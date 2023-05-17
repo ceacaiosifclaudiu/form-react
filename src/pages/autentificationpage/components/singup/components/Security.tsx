@@ -1,4 +1,4 @@
-import Input from "../../../../../component/inputs/Input";
+import Input from "../../../../../component/inputs/input/Input";
 
 const Security = ({ register, errors }: any) => {
   return (

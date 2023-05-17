@@ -1,0 +1,23 @@
+.termsContainer {
+  position: relative;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 5px;
+  align-self: center;
+  width: 100%;
+}
+
+.checkboxText {
+  flex: 10;
+  font-size: clamp(0.75rem, 0.4375rem + 1vw, 1rem);
+}
+
+.errorCheckbox {
+  position: absolute;
+  bottom: -21px;
+  width: 250px;
+  color: var(--errorColor);
+  left: 0;
+  font-size: clamp(0.625rem, 0.3906rem + 0.75vw, 0.8125rem);
+}

@@ -6,6 +6,7 @@ import "./Login.css";
 import { useForm } from "react-hook-form";
 import { loginSchema } from "../../../../schema/formSchema";
 import GoogleConnect from "../../../../component/googleConnect/GoogleConnect";
+import Input from "../../../../component/inputs/input/Input";
 
 const LoginComponent = () => {
   const dispatch = useDispatch();
@@ -18,8 +19,6 @@ const LoginComponent = () => {
     resolver: yupResolver(loginSchema),
   });
 
-  const userName = useSelector((state: any) => state.user);
-  console.log(userName);
 
   const submitForm = (data: any) => {
     console.log(data);
@@ -40,31 +39,19 @@ const LoginComponent = () => {
         </p>
         <form onSubmit={handleSubmit(submitForm)}>
           <div className="loginFormCredentils">
-            <div className="inputNewContainer">
-              <input
-                {...register("email")}
-                type="email"
-                className="inputNew"
-                placeholder=" "
-              />
-              <label className="inputNewLabel">Email</label>
-              <p className="inputErrorMessage">
-                {errors?.email?.message?.toString()}
-              </p>
-            </div>
+            <Input
+              formObject={register("email")}
+              message={errors?.firstName?.message?.toString()}
+              type="email"
+              placeholder="Email"
+            />
 
-            <div className="inputNewContainer">
-              <input
-                {...register("password")}
-                type="password"
-                className="inputNew"
-                placeholder=" "
-              />
-              <label className="inputNewLabel">Password</label>
-              <p className="inputErrorMessage">
-                {errors?.password?.message?.toString()}
-              </p>
-            </div>
+            <Input
+              formObject={register("password")}
+              message={errors?.firstName?.message?.toString()}
+              type="password"
+              placeholder="Password"
+            />
             <p className="forgotPassword">Forgot Password?</p>
           </div>
 

@@ -8,19 +8,6 @@
   justify-content: center;
 }
 
-.container {
-  max-width: 900px;
-  width: 900px;
-  height: 600px;
-  background: white;
-  position: relative;
-  overflow: hidden;
-  border-radius: 0px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 input {
   border: 1px solid var(--whiteColor);
   padding: 0.8rem 10px;
@@ -41,7 +28,7 @@ input[type="submit"] {
   cursor: pointer;
   background-image: var(--backgroundImge);
   color: white;
-  font-size: 18px;
+  font-size: clamp(0.875rem, 0.5625rem + 1vw, 1.125rem);
   text-align: center;
 }
 
@@ -76,25 +63,3 @@ input[type="checkbox"] {
   outline: 1px solid red;
 }
 
-.termsContainer {
-  position: relative;
-  display: flex;
-  flex: 1;
-  align-items: center;
-  gap: 5px;
-  align-self: center;
-  width: 100%;
-}
-
-.checkboxText {
-  flex: 10;
-}
-
-.errorCheckbox {
-  position: absolute;
-  bottom: -21px;
-  width: 250px;
-  color: var(--errorColor);
-  left: 0;
-  font-size: 13px;
-}
