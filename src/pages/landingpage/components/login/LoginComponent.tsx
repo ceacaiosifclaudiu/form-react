@@ -1,13 +1,15 @@
 import { yupResolver } from "@hookform/resolvers/yup";
-import { useDispatch } from "react-redux";
-import { goToSingup } from "../../../../redux/userSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { goToSingup } from "../../../../redux/userHaveAccountSlice";
 import "./Login.css";
 
 import { useForm } from "react-hook-form";
 import { loginSchema } from "../../../../schema/formSchema";
+import GoogleConnect from "../../../../component/googleConnect/GoogleConnect";
 
 const LoginComponent = () => {
   const dispatch = useDispatch();
+
   const {
     register,
     handleSubmit,
@@ -15,6 +17,9 @@ const LoginComponent = () => {
   } = useForm({
     resolver: yupResolver(loginSchema),
   });
+
+  const userName = useSelector((state: any) => state.user);
+  console.log(userName);
 
   const submitForm = (data: any) => {
     console.log(data);
@@ -65,6 +70,7 @@ const LoginComponent = () => {
 
           <input type="submit" value="Login" />
         </form>
+        <GoogleConnect />
       </div>
     </div>
   );

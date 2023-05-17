@@ -1,6 +1,6 @@
 .containerDinamic {
   width: 900px;
-  height: 600px;
+  height: 650px;
   background: white;
   border-radius: 40px;
   position: relative;
@@ -123,3 +123,5 @@
   font-size: 11px;
   transform: translateX(5px) translateY(-20px);
 }
+
+

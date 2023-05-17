@@ -1,6 +1,7 @@
 import { createBrowserRouter, Outlet } from "react-router-dom";
 import LandingPage from "../pages/landingpage/LandingPage";
 import PageNotFound from "../pages/404/404";
+import OtherPage from "../pages/otherpage/OtherPage";
 
 const Layout = () => {
   return (
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <LandingPage />,
+      },
+      {
+        path: "otherpage",
+        element: <OtherPage />,
       },
     ],
   },

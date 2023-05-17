@@ -1,0 +1,17 @@
+.singinWithGoogleContainer {
+    position: relative;
+    padding-top: 20px;
+    border-top: 1px solid var(--backgroundSecundary);
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .brakeLine {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-58%);
+    background: var(--backgroundContainers);
+    padding-inline: 10px;
+  }

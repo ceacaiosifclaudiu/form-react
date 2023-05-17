@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
 
 const LandingPage = () => {
-  const user = useSelector((state: RootState) => state.userAccount.value);
+  const user = useSelector((state: RootState) => state.userHaveAccount.value);
 
   return (
     <div className="containerDinamic">
