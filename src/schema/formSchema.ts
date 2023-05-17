@@ -1,4 +1,4 @@
-import * as yup from "yup"
+import * as yup from "yup";
 
 const passwordRules = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}$/;
 
@@ -22,4 +22,4 @@ const loginSchema = yup.object().shape({
         .matches(passwordRules, { message: "Please create a stronger password" }),
 })
 
-export { registerSchema, loginSchema }
+export { registerSchema, loginSchema };

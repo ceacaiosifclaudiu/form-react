@@ -1,8 +1,8 @@
 import { GoogleLogin } from "@react-oauth/google";
-import { useDispatch } from "react-redux";
-import { setUser } from "../../redux/userAccountSlice";
-import { useNavigate } from "react-router-dom";
 import jwt_decode from "jwt-decode";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { setUser } from "../../redux/userAccountSlice";
 import "./GoogleConnect.css";
 
 const GoogleConnect = () => {

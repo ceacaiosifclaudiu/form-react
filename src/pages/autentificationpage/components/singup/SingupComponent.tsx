@@ -6,11 +6,11 @@ import "./Singup.css";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import { registerSchema } from "../../.../../../../schema/formSchema";
+import GoogleConnect from "../../../../component/googleConnect/GoogleConnect";
 import Input from "../../../../component/inputs/input/Input";
 import Optionalinfo from "./components/Optionalinfo";
 import PersonalDetails from "./components/PersonalDetails";
 import Security from "./components/Security";
-import GoogleConnect from "../../../../component/googleConnect/GoogleConnect";
 
 const SingupComponent = () => {
   const dispatch = useDispatch();
