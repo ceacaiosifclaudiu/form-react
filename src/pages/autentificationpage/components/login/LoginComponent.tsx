@@ -1,5 +1,5 @@
 import { yupResolver } from "@hookform/resolvers/yup";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { goToSingup } from "../../../../redux/userHaveAccountSlice";
 import "./Login.css";
 
@@ -18,7 +18,6 @@ const LoginComponent = () => {
   } = useForm({
     resolver: yupResolver(loginSchema),
   });
-
 
   const submitForm = (data: any) => {
     console.log(data);

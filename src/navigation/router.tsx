@@ -1,6 +1,6 @@
 import { createBrowserRouter, Outlet } from "react-router-dom";
-import AutentificationPage from "../pages/autentificationpage/AutentificationPage";
 import PageNotFound from "../pages/404/404";
+import AutentificationPage from "../pages/autentificationpage/AutentificationPage";
 import LandingPage from "../pages/landingpage/LandingPage";
 
 const Layout = () => {

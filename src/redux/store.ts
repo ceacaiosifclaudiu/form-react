@@ -1,17 +1,17 @@
-import { combineReducers, configureStore } from '@reduxjs/toolkit'
-import userHaveAccountReducer from './userHaveAccountSlice'
-import userAccountReducer from "./userAccountSlice"
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
+import userAccountReducer from "./userAccountSlice";
+import userHaveAccountReducer from './userHaveAccountSlice';
 
-import storage from 'redux-persist/lib/storage';
 import {
-    persistReducer,
     FLUSH,
-    REHYDRATE,
     PAUSE,
     PERSIST,
     PURGE,
     REGISTER,
+    REHYDRATE,
+    persistReducer,
 } from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
 
 const persistConfig = {
     key: "user",

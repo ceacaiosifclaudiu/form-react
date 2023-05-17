@@ -31,6 +31,8 @@ export const userAccount = createSlice({
             state.email = ""
             state.name = ""
             state.picture = ""
+            state.family_name = ""
+            state.given_name = ""
         }
     },
 })
