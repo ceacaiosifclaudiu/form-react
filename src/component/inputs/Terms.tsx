@@ -1,14 +1,14 @@
-import "./Terms.css"
+import "../css/Terms.css";
 
 const Terms = ({ register, errors }: any) => {
   return (
-    <div className="termsContainer">
+    <div className="terms-container flex--start">
       <input type="checkbox" {...register("acceptTerms")} name="acceptTerms" />
-      <p className="checkboxText">
+      <p className="font--size--medium ">
         Accept terms and conditions{" "}
         <span style={{ color: "var(--errorColor)" }}>*</span>
       </p>
-      <p className="errorCheckbox">
+      <p className="error-checkbox font--size--smaller">
         {errors?.acceptTerms?.message?.toString()}
       </p>
     </div>

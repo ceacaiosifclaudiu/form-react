@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { logOut } from "../../redux/userAccountSlice";
-import "./LandingPage.css";
+import "../../css/LandingPage.css";
 
 const LandingPage = () => {
   const user = useSelector((state: any) => state.user);
@@ -17,11 +17,13 @@ const LandingPage = () => {
   }, [user]);
 
   return (
-    <div className="containerLandingPage">
+    <div className="container-landingPage flex--column--center">
       <img src={user?.picture} alt="" />
-      <h1>Hi {user?.name ? user?.name : null}</h1>
-      
-      <div className="logoutButton" onClick={() => dispatch(logOut())}>
+      <h1 className="font--size--bigger">
+        Hi {user?.name ? user?.name : null}
+      </h1>
+
+      <div className="logout-button font--size--big" onClick={() => dispatch(logOut())}>
         Log out
       </div>
     </div>

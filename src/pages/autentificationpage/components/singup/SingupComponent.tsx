@@ -1,13 +1,12 @@
 import { useDispatch } from "react-redux";
-import Terms from "../../../../component/inputs/terms/Terms";
+import Terms from "../../../../component/inputs/Terms";
 import { goToLogin } from "../../../../redux/userHaveAccountSlice";
-import "./Singup.css";
 
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import { registerSchema } from "../../.../../../../schema/formSchema";
-import GoogleConnect from "../../../../component/googleConnect/GoogleConnect";
-import Input from "../../../../component/inputs/input/Input";
+import GoogleConnect from "../../../../component/GoogleConnect";
+import Input from "../../../../component/inputs/Input";
 import Optionalinfo from "./components/Optionalinfo";
 import PersonalDetails from "./components/PersonalDetails";
 import Security from "./components/Security";
@@ -27,19 +26,19 @@ const SingupComponent = () => {
   };
 
   return (
-    <div className="singupContainer">
-      <div className="containerForm">
-        <h2 className="formTitle">
+    <div className="container flex--center">
+      <div className="container-form ">
+        <h2 className="form-title">
           Welcome to our form,
           <br />
           Sing up to Continue.
         </h2>
-        <p className="formDescription">
+        <p className="form-description font--size--medium">
           Already have an account?{" "}
           <span onClick={() => dispatch(goToLogin())}>Go to login</span>
         </p>
         <form onSubmit={handleSubmit(submitForm)}>
-          <div className="loginFormCredentils">
+          <div className="flex--column--center form--inputs--gap">
             <PersonalDetails register={register} errors={errors} />
 
             <Input

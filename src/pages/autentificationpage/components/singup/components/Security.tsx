@@ -1,8 +1,8 @@
-import Input from "../../../../../component/inputs/input/Input";
+import Input from "../../../../../component/inputs/Input";
 
 const Security = ({ register, errors }: any) => {
   return (
-    <div className="inputsContainer">
+    <div className="flex--center container-half">
       <Input
         formObject={register("password")}
         message={errors?.password?.message?.toString()}

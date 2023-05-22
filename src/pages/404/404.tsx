@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 import Image from "../../assets/pngegg.png";
-import "./404.css";
+import "../../css/404.css";
 
 const PageNotFound = () => {
   return (
-    <div className="background">
-      <div className="container404">
-        <img src={Image} className="image404" />
-        <Link to="/" className="button404">
+    <div className="background flex--center">
+      <div className="container-404 flex--column">
+        <img src={Image} className="image-404" />
+        <Link to="/" className="button button--rounded linear--gradient">
           Go to Login
         </Link>
       </div>

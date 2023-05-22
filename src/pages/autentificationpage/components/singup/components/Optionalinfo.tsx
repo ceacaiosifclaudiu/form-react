@@ -1,9 +1,9 @@
-import Radios from "../../../../../component/inputs/radios/Radios";
-import Select from "../../../../../component/inputs/select/Select";
+import Radios from "../../../../../component/inputs/Radios";
+import Select from "../../../../../component/inputs/Select";
 
 const Optionalinfo = ({ register }: any) => {
   return (
-    <div className="optionalInfoContainer">
+    <div className="flex--center container-half">
       <Radios formObject={register("accountType")} />
       <Select formObject={register("pronounce")} />
     </div>

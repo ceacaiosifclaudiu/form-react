@@ -1,0 +1,14 @@
+.singin-with-google-container {
+  position: relative;
+  padding-top: 20px;
+  margin-top: 20px;
+  border-top: 1px solid var(--backgroundSecundary);
+}
+
+.brake-line {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-58%);
+  padding-inline: 10px;
+}

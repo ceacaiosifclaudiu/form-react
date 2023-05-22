@@ -1,12 +1,11 @@
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useDispatch } from "react-redux";
 import { goToSingup } from "../../../../redux/userHaveAccountSlice";
-import "./Login.css";
 
 import { useForm } from "react-hook-form";
 import { loginSchema } from "../../../../schema/formSchema";
-import GoogleConnect from "../../../../component/googleConnect/GoogleConnect";
-import Input from "../../../../component/inputs/input/Input";
+import GoogleConnect from "../../../../component/GoogleConnect";
+import Input from "../../../../component/inputs/Input";
 
 const LoginComponent = () => {
   const dispatch = useDispatch();
@@ -24,20 +23,20 @@ const LoginComponent = () => {
   };
 
   return (
-    <div className="loginContainer">
-      <div className="containerForm">
-        <h2 className="formTitle">
+    <div className="container flex--center ">
+      <div className="container-form flex--column--center ">
+        <h2 className="formTitle font--size--bigger">
           Welcome back,
           <br />
           Sing in to Continue.
         </h2>
-        <p className="formDescription">
+        <p className="form-description font--size--medium">
           Don't have an account?{" "}
           <span onClick={() => dispatch(goToSingup())}>Create a account</span>
           <br /> It Takes less than a minute.
         </p>
         <form onSubmit={handleSubmit(submitForm)}>
-          <div className="loginFormCredentils">
+          <div className="flex--column--center form--inputs--gap">
             <Input
               formObject={register("email")}
               message={errors?.email?.message?.toString()}
@@ -51,10 +50,12 @@ const LoginComponent = () => {
               type="password"
               placeholder="Password"
             />
-            <p className="forgotPassword">Forgot Password?</p>
+            <p className="forgot-password font--size--smaller">
+              Forgot Password?
+            </p>
           </div>
 
-          <input type="submit" value="Login" />
+          <input type="submit" value="Login" className="font--size--big" />
         </form>
         <GoogleConnect />
       </div>
