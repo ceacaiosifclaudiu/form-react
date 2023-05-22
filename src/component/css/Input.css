@@ -1,4 +1,4 @@
-.inputContainer {
+.input-container {
   position: relative;
   min-width: 160px;
   flex: 1;
@@ -14,13 +14,12 @@
   outline: none;
 }
 
-.inputContainer .input ~ label {
+.input__label {
   position: absolute;
   bottom: 10px;
   left: 0;
   pointer-events: none;
   transition: 0.3s ease;
-  font-size: clamp(0.875rem, 0.6406rem + 0.75vw, 1.0625rem);
   padding-inline: 5px;
 }
 

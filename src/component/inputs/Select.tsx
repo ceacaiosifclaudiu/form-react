@@ -1,9 +1,9 @@
-import "./Select.css";
+import "../css/Select.css";
 
 const Select = ({ formObject }: any) => {
   return (
-    <div className="selectOptionContainer">
-      <label>Choose a pronounce:</label>
+    <div className="flex--column--end select-option-container">
+      <label className="font--size--small">Choose a pronounce:</label>
       <select {...formObject}>
         <option value="">--Choose an option--</option>
         <option value="She/Her">She/Her</option>

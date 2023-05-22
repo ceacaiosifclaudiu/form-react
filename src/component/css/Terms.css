@@ -1,0 +1,12 @@
+.terms-container {
+  position: relative;
+  gap: 5px;
+}
+
+.error-checkbox {
+  position: absolute;
+  bottom: -21px;
+  width: 250px;
+  color: var(--errorColor);
+  left: 0;
+}

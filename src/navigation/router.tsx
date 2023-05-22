@@ -5,7 +5,7 @@ import LandingPage from "../pages/landingpage/LandingPage";
 
 const Layout = () => {
   return (
-    <div className="background">
+    <div className="background flex--center">
       <Outlet />
     </div>
   );

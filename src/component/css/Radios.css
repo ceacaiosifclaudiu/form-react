@@ -1,0 +1,25 @@
+.radio-buttons-containers {
+  display: flex;
+  flex: 1;
+  min-width: 165px;
+}
+
+.radio-buttons-options {
+  gap: 10px;
+  flex: 1;
+}
+
+.radio-buttons {
+  gap: 5px;
+}
+
+@media only screen and (max-width: 439px) {
+  .radioButtonsOptions {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .radioButtonsContainer {
+    align-items: center;
+    margin-bottom: 20px;
+  }
+}
