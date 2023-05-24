@@ -1,4 +1,4 @@
-.select-option-container {
+.container-select-option {
   gap: 5px;
   flex: 1;
   min-width: 171px;
@@ -11,10 +11,10 @@ select {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 439px) {
-  .select-option-container {
+@media only screen and (max-width: 460px) {
+  .container-select-option {
     flex-direction: row;
     align-items: center;
-    gap: 10px;
+    gap: 30px;
   }
 }

@@ -10,7 +10,7 @@ const AutentificationPage = () => {
 
   return (
     <div className="container-dinamic">
-      <div className={`inner-container ${user ? null : "active"}`}>
+      <div className={`inner-container flex--center ${user ? null : "active"}`}>
         <LoginComponent />
         <CenterComponent />
         <SingupComponent />

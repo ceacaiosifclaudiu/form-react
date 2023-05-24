@@ -1,4 +1,4 @@
-.radio-buttons-containers {
+.container-radio-buttons {
   display: flex;
   flex: 1;
   min-width: 165px;
@@ -13,13 +13,8 @@
   gap: 5px;
 }
 
-@media only screen and (max-width: 439px) {
-  .radioButtonsOptions {
-    flex-direction: row;
-    justify-content: center;
-  }
-  .radioButtonsContainer {
-    align-items: center;
-    margin-bottom: 20px;
+@media only screen and (max-width: 461px) {
+  .radio-buttons {
+    margin-left: 10px;
   }
 }
