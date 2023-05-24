@@ -10,18 +10,20 @@ const GoogleConnect = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="singin-with-google-container">
+    <div className="container-google">
       <p className="brake-line background--container">Or</p>
-      <GoogleLogin
-        onSuccess={(credentialResponse: any) => {
-          const details = jwt_decode(credentialResponse?.credential);
-          dispatch(setUser(details));
-          navigate("/store");
-        }}
-        onError={() => {
-          console.log("Login Failed");
-        }}
-      />
+      <div className="flex--center">
+        <GoogleLogin
+          onSuccess={(credentialResponse: any) => {
+            const details = jwt_decode(credentialResponse?.credential);
+            dispatch(setUser(details));
+            navigate("/store");
+          }}
+          onError={() => {
+            console.log("Login Failed");
+          }}
+        />
+      </div>
     </div>
   );
 };

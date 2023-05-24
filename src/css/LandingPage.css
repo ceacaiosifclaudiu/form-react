@@ -1,4 +1,4 @@
-.container-landingPage {
+.container-landing-page {
   flex-basis: 900px;
   max-width: 90%;
   height: 650px;
@@ -8,12 +8,12 @@
 }
 
 .logout-button {
-  cursor: pointer;
+  text-align: center;
+  font-weight: 500;
   background-image: var(--backgroundImge);
   color: white;
-  text-align: center;
+  cursor: pointer;
   padding: 0.8rem 10px;
-  font-weight: 500;
 }
 
 .logout-button:hover {
@@ -23,4 +23,9 @@
 .container-half {
   gap: 1rem;
   flex-wrap: wrap;
+}
+
+.img {
+  width: 100%;
+  height: auto;
 }

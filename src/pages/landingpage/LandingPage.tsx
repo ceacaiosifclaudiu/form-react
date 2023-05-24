@@ -17,14 +17,19 @@ const LandingPage = () => {
   }, [user]);
 
   return (
-    <div className="container-landingPage flex--column--center">
-      <img src={user?.picture} alt="" />
-      <h1 className="font--size--bigger">
-        Hi {user?.name ? user?.name : null}
-      </h1>
+    <div className="container-landing-page flex--center">
+      <div className="flex--center--column">
+        <img src={user?.picture} alt="" className="img" />
+        <h1 className="font--size--bigger">
+          Hi {user?.name ? user?.name : null}
+        </h1>
 
-      <div className="logout-button font--size--big" onClick={() => dispatch(logOut())}>
-        Log out
+        <div
+          className="logout-button font--size--big"
+          onClick={() => dispatch(logOut())}
+        >
+          Log out
+        </div>
       </div>
     </div>
   );

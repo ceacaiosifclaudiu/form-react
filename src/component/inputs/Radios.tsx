@@ -6,7 +6,7 @@ type Input = {
 
 const Radios = ({ formObject }: Input) => {
   return (
-    <div className="radio-buttons-containers">
+    <div className="container-radio-buttons">
       <p className="font--size--medium">Is this account:</p>
       <div className="radio-buttons-options flex--column--end">
         <div className="radio-buttons flex--center">

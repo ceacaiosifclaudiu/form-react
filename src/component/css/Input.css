@@ -1,7 +1,8 @@
-.input-container {
+.container-input {
   position: relative;
   min-width: 160px;
   flex: 1;
+  background: #000;
 }
 
 .input {
@@ -28,5 +29,13 @@
   color: var(--background);
   background: var(--backgroundContainers);
   font-size: clamp(0.5625rem, 0.4063rem + 0.5vw, 0.6875rem);
-  transform: translateX(5px) translateY(-20px);
+  transform: translateX(5px) translateY(-25px);
+}
+
+.svg {
+  width: 20px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
 }
