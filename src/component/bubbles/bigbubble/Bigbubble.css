@@ -1,6 +1,6 @@
 .bigBubble {
   background: var(--background);
-  background-image: var(--backgroundImge);
+  background-image: var(--backgroundImage);
   position: absolute;
   transition: 0.6s ease;
   width: 9.375rem;
