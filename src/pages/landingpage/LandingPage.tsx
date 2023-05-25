@@ -21,7 +21,7 @@ const LandingPage = () => {
       <div className="flex--center--column">
         <img src={user?.picture} alt="" className="img" />
         <h1 className="font--size--bigger">
-          Hi {user?.name ? user?.name : null}
+          Hi, {user?.name ? user?.name : null}
         </h1>
 
         <div

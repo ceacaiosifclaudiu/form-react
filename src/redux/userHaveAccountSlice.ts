@@ -12,7 +12,7 @@ export const userHaveAccount = createSlice({
     name: 'userHaveAccount',
     initialState,
     reducers: {
-        goToSingup: (state) => {
+        goToSignup: (state) => {
             state.value = false
         },
         goToLogin: (state) => {
@@ -22,6 +22,6 @@ export const userHaveAccount = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-export const { goToSingup, goToLogin } = userHaveAccount.actions
+export const { goToSignup, goToLogin } = userHaveAccount.actions
 
 export default userHaveAccount.reducer

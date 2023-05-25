@@ -4,14 +4,14 @@ import { goToLogin } from "../../../../redux/userHaveAccountSlice";
 
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
-import { registerSchema } from "../../.../../../../schema/formSchema";
+import { registerSchema } from "../../../../schema/formSchema";
 import GoogleConnect from "../../../../component/GoogleConnect";
 import Input from "../../../../component/inputs/Input";
 import Optionalinfo from "./components/Optionalinfo";
 import PersonalDetails from "./components/PersonalDetails";
 import Security from "./components/Security";
 
-const SingupComponent = () => {
+const SignupComponent = () => {
   const dispatch = useDispatch();
   const {
     register,
@@ -31,7 +31,7 @@ const SingupComponent = () => {
         <h2 className="form-title">
           Welcome to our form,
           <br />
-          Sing up to Continue.
+          Sign up to Continue.
         </h2>
         <p className="form-description font--size--medium">
           Already have an account?{" "}
@@ -62,4 +62,4 @@ const SingupComponent = () => {
   );
 };
 
-export default SingupComponent;
+export default SignupComponent;

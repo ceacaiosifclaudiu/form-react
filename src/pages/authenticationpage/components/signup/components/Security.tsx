@@ -7,7 +7,7 @@ const Security = ({ register, errors }: any) => {
         formObject={register("password")}
         message={errors?.password?.message?.toString()}
         type="password"
-        placeholder="Pasword"
+        placeholder="Password"
       />
       <Input
         formObject={register("confirmPassword")}

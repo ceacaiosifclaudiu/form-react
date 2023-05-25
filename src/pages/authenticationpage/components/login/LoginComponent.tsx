@@ -1,6 +1,6 @@
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useDispatch } from "react-redux";
-import { goToSingup } from "../../../../redux/userHaveAccountSlice";
+import { goToSignup } from "../../../../redux/userHaveAccountSlice";
 
 import { useForm } from "react-hook-form";
 import { loginSchema } from "../../../../schema/formSchema";
@@ -28,11 +28,11 @@ const LoginComponent = () => {
         <h2 className="formTitle font--size--bigger">
           Welcome back,
           <br />
-          Sing in to Continue.
+          Sign in to Continue.
         </h2>
         <p className="form-description font--size--medium">
           Don't have an account?{" "}
-          <span onClick={() => dispatch(goToSingup())}>Create a account</span>
+          <span onClick={() => dispatch(goToSignup())}>Create a account</span>
           <br /> It Takes less than a minute.
         </p>
         <form onSubmit={handleSubmit(submitForm)}>

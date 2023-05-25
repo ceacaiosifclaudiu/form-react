@@ -1,7 +1,7 @@
 import { createBrowserRouter, Outlet } from "react-router-dom";
 import PageNotFound from "../pages/404/404";
-import AutentificationPage from "../pages/autentificationpage/AutentificationPage";
 import LandingPage from "../pages/landingpage/LandingPage";
+import AuthenticationPage from "../pages/authenticationpage/AuthenticationPage";
 
 const Layout = () => {
   return (
@@ -19,7 +19,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <AutentificationPage />,
+        element: <AuthenticationPage />,
       },
       {
         path: "/store",
