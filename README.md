@@ -15,4 +15,4 @@ Run The app
 
 Live demo: https://form-git-main-ceacaiosifclaudiu.vercel.app/
 
- <img src="https://github.com/ceacaiosifclaudiu/pentruDeyu/assets/110819428/3447386a-f2ba-46db-bea9-94f97933ff1b" alt="Coder GIF" width="500">
+![ezgif com-optimize](https://github.com/ceacaiosifclaudiu/test/assets/110819428/ab2ddaa4-1e99-440f-9fd4-aaf293e2f8dd)
