@@ -15,4 +15,4 @@ Run The app
 
 Live demo: https://form-git-main-ceacaiosifclaudiu.vercel.app/
 
-![ezgif com-optimize](https://github.com/ceacaiosifclaudiu/test/assets/110819428/ab2ddaa4-1e99-440f-9fd4-aaf293e2f8dd)
+![ezgif com-optimize](https://github.com/ceacaiosifclaudiu/Form---React/assets/110819428/cb283ca0-7c50-46b6-a7a6-d64e8e52ef6b)
