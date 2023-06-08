@@ -26,6 +26,7 @@ const Input = ({ type, message, placeholder, formObject }: Input) => {
         className="input font--size--small background--container "
         placeholder=" "
         autoComplete="off"
+        id={`input-${placeholder?.toLowerCase().replace(/\s/g, "-")}`}
       />
       <label className="input__label font--size--medium">{placeholder}</label>
       {type === "password" ? (

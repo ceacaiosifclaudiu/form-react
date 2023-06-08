@@ -14,6 +14,7 @@ const PersonalDetails = ({ register, errors }: any) => {
         message={errors?.lastName?.message?.toString()}
         type="text"
         placeholder="Last Name"
+        
       />
     </div>
   );
