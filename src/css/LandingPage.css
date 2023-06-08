@@ -12,7 +12,7 @@
   font-weight: 500;
   background-image: var(--backgroundImage);
   color: white;
-  cursor: pointer;
+  cursor: pointer; 
   padding: 0.8rem 10px;
 }
 
