@@ -1,17 +1,31 @@
 # React Form
 
-## Get Started
+A React application that allows users to log in or create an account.
 
-install dev dependencies
+## Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/ceacaiosifclaudiu/Form---React.git
 
-### `npm install`
+2. Install dependencies:
+   ```bash
+    cd restaurant-app
+    npm install
+ 
+2. Start the development server:
+    ```bash
+    `npm run dev
+    
+## Technologies Used
+- Vite
+- React
+- Redux Toolkit
+- React Hook Form
+- React Router DOM
+- Google OAuth
+- Cypress
 
-## Then
-
-Run The app
-
-### `npm run dev`
-
+## GIF
 
 Live demo: https://form-git-main-ceacaiosifclaudiu.vercel.app/
 
