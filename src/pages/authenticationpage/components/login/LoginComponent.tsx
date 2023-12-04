@@ -1,13 +1,15 @@
 import { yupResolver } from "@hookform/resolvers/yup";
-import { useDispatch } from "react-redux";
-import { goToSignup } from "../../../../redux/userHaveAccountSlice";
-
+import React from "react";
 import { useForm } from "react-hook-form";
-import { loginSchema } from "../../../../schema/formSchema";
+import { useDispatch } from "react-redux";
 import GoogleConnect from "../../../../component/GoogleConnect";
-import Input from "../../../../component/inputs/Input";
+import { goToSignup } from "../../../../redux/userHaveAccountSlice";
+import { loginSchema } from "../../../../schema/formSchema";
+import LoginDescription from "./components/LoginDescription";
+import LoginFormComponent from "./components/LoginFormComponent";
+import LoginTitle from "./components/LoginTitle";
 
-const LoginComponent = () => {
+const LoginComponent: React.FC = () => {
   const dispatch = useDispatch();
 
   const {
@@ -18,45 +20,22 @@ const LoginComponent = () => {
     resolver: yupResolver(loginSchema),
   });
 
-  const submitForm = (data: any) => {
+  const onSubmit = (data: any) => {
     console.log(data);
   };
 
   return (
-    <div className="container flex--center ">
-      <div className="container-form flex--column--center ">
-        <h2 className="formTitle font--size--bigger">
-          Welcome back,
-          <br />
-          Sign in to Continue.
-        </h2>
-        <p className="form-description font--size--medium">
-          Don't have an account?{" "}
-          <span onClick={() => dispatch(goToSignup())}>Create a account</span>
-          <br /> It Takes less than a minute.
-        </p>
-        <form onSubmit={handleSubmit(submitForm)}>
-          <div className="flex--column--center form--inputs--gap">
-            <Input
-              formObject={register("email")}
-              message={errors?.email?.message?.toString()}
-              type="email"
-              placeholder="Email"
-            />
-
-            <Input
-              formObject={register("password")}
-              message={errors?.password?.message?.toString()}
-              type="password"
-              placeholder="Password"
-            />
-            <p className="forgot-password font--size--smaller">
-              Forgot Password?
-            </p>
-          </div>
-
-          <input type="submit" value="Login" className="font--size--big" />
-        </form>
+    <div className="container flex--center">
+      <div className="container-form flex--column--center">
+        <LoginTitle />
+        <LoginDescription onSignupClick={() => dispatch(goToSignup())} />
+        <LoginFormComponent
+          registerEmail={register("email")}
+          errorEmail={errors?.email?.message?.toString()}
+          registerPassword={register("password")}
+          errorPassword={errors?.password?.message?.toString()}
+          onSubmit={handleSubmit(onSubmit)}
+        />
         <GoogleConnect />
       </div>
     </div>

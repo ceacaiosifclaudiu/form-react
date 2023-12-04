@@ -1,35 +1,22 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
-import { logOut } from "../../redux/userAccountSlice";
+import { useSelector } from "react-redux";
+import useRedirectIfNotLoggedIn from "../../hooks/useRedirectIfNotLoggedIn";
+import LogoutButton from "../../component/LogoutButton";
 import "../../css/LandingPage.css";
 
-const LandingPage = () => {
+const LandingPage: React.FC = () => {
   const user = useSelector((state: any) => state.user);
-  const navigate = useNavigate();
-  const dispatch = useDispatch();
-  console.log(user);
-
-  React.useEffect(() => {
-    if (user.email === "") {
-      navigate("/");
-    }
-  }, [user]);
+  useRedirectIfNotLoggedIn(user);
 
   return (
     <div className="container-landing-page flex--center">
       <div className="flex--center--column">
-        <img src={user?.picture} alt="" className="img" />
+        <img src={user?.picture} alt="user-picture" className="img" />
         <h1 className="font--size--bigger">
           Hi, {user?.name ? user?.name : null}
         </h1>
 
-        <div
-          className="logout-button font--size--big"
-          onClick={() => dispatch(logOut())}
-        >
-          Log out
-        </div>
+        <LogoutButton />
       </div>
     </div>
   );

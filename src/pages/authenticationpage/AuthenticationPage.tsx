@@ -1,19 +1,19 @@
+import { useSelector } from "react-redux";
 import "../../css/AuthenticationPage.css";
+import { RootState } from "../../redux/store";
 import CenterComponent from "./components/CenterComponent";
 import LoginComponent from "./components/login/LoginComponent";
-import { useSelector } from "react-redux";
-import { RootState } from "../../redux/store";
-import SignupComponent from "./components/signup/SignupComponent";
+import SignUpComponent from "./components/signup/SignUpComponent";
 
 const AuthenticationPage = () => {
   const user = useSelector((state: RootState) => state.userHaveAccount.value);
 
   return (
     <div className="container-dynamic">
-      <div className={`inner-container flex--center ${user ? null: "active"}`}>
+      <div className={`inner-container flex--center ${user ? null : "active"}`}>
         <LoginComponent />
         <CenterComponent />
-        <SignupComponent />
+        <SignUpComponent />
       </div>
     </div>
   );
