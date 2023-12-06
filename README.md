@@ -9,12 +9,12 @@ A React application that allows users to log in or create an account.
 
 2. Install dependencies:
    ```bash
-    cd restaurant-app
+    cd form-react
     npm install
  
 2. Start the development server:
     ```bash
-    `npm run dev
+    npm run dev
     
 ## Technologies Used
 - Vite
